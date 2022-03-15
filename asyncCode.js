@@ -61,7 +61,7 @@ function brokenRecord() {
 
 function limitedRepeat() {
   // ADD CODE HERE
-  const test = setInterval(() => console.log('hi'), 1000);
+  const test = setInterval(() => console.log('hi for now'), 1000);
   setTimeout(() => {
     clearInterval(test);
   }, 6000);
