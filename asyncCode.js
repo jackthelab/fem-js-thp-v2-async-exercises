@@ -64,7 +64,7 @@ function limitedRepeat() {
   const test = setInterval(() => console.log('hi for now'), 1000);
   setTimeout(() => {
     clearInterval(test);
-  }, 6000);
+  }, 5000);
 
 }
 // Uncomment the following line to check your work!
