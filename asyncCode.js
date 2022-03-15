@@ -16,6 +16,9 @@ function testMe() {
 
 function delayedGreet() {
   // ADD CODE HERE
+  setTimeout(() => {
+    console.log('welcome');
+  }, 3000);
 }
 // Uncomment the following line to check your work!
 // delayedGreet(); // should log (after 3 seconds): welcome
@@ -25,6 +28,11 @@ function delayedGreet() {
 
 function helloGoodbye() {
   // ADD CODE HERE
+  setTimeout(() => {
+    console.log('goodbye');
+  }, 3000);
+
+  console.log('hello');
 }
 // Uncomment the following line to check your work!
 // helloGoodbye(); // should log: hello // should also log (after 3 seconds): good bye
@@ -33,7 +41,17 @@ function helloGoodbye() {
 /* CHALLENGE 4 */
 
 function brokenRecord() {
-  // ADD CODE HERE
+
+  // setInterval((greeting) => {
+  //   console.log(greeting);
+  // }, 1000, 'hi');
+
+  // recursive setTimeout
+  setTimeout(() => {
+    console.log('hi');
+    brokenRecord();
+  }, 1000);
+
 }
 // Uncomment the following line to check your work!
 // brokenRecord(); // should log (every second): hi again
@@ -43,6 +61,11 @@ function brokenRecord() {
 
 function limitedRepeat() {
   // ADD CODE HERE
+  const test = setInterval(() => console.log('hi'), 1000);
+  setTimeout(() => {
+    clearInterval(test);
+  }, 6000);
+
 }
 // Uncomment the following line to check your work!
 // limitedRepeat(); // should log (every second, for 5 seconds): hi for now
